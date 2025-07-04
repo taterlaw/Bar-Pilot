@@ -18,6 +18,17 @@
             padding: 20px;
             text-align: center;
         }
+        nav {
+            background: #357ab8;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
         .container {
             max-width: 800px;
             margin: 40px auto;
@@ -75,10 +86,10 @@
 <body>
     <header>
         <h1>Bar Pilot Support</h1>
-    $1
-    <nav style="background:#357ab8; padding:10px; text-align:center;">
-        <a href="index.html" style="color:white; margin:0 15px; text-decoration:none;">Support</a>
-        <a href="policy.html" style="color:white; margin:0 15px; text-decoration:none;">Privacy Policy</a>
+    </header>
+    <nav>
+        <a href="index.html">Support</a>
+        <a href="policy.html">Privacy Policy</a>
     </nav>
     <div class="container">
         <section id="faq">
@@ -117,7 +128,6 @@
         document.getElementById('support-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const email = e.target.email.value;
-            const msg = e.target.message.value;
             // Placeholder: implement actual submission logic here
             alert(`Thank you! We received your message.\nEmail: ${email}`);
             e.target.reset();
