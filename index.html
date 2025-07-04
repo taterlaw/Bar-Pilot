@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Pilot Support</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4a90e2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        .faq-item {
+            margin: 16px 0;
+        }
+        .faq-item summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin: 8px 0 4px;
+        }
+        form input, form textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font: inherit;
+        }
+        form button {
+            margin-top: 16px;
+            padding: 12px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form button:hover {
+            background: #357ab8;
+        }
+        footer {
+            text-align: center;
+            margin: 40px 0;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bar Pilot Support</h1>
+    </header>
+    <div class="container">
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <details class="faq-item">
+                <summary>How do I add a folder?</summary>
+                <p>Click the “Add Folder…” button in the menu bar menu and select your folder.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Why do I get a permission prompt?</summary>
+                <p>Bar Pilot uses security-scoped bookmarks. Granting access once preserves permissions across relaunches.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How do I remove a folder?</summary>
+                <p>Open the submenu for a folder in the menu bar and click “Remove”.</p>
+            </details>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you need further assistance, send us a message:</p>
+            <form id="support-form">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Describe your issue or question"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 Bar Pilot, Inc. All rights reserved.
+    </footer>
+    <script>
+        document.getElementById('support-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = e.target.email.value;
+            const msg = e.target.message.value;
+            // Placeholder: implement actual submission logic here
+            alert(`Thank you! We received your message.\nEmail: ${email}`);
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
